@@ -1,12 +1,11 @@
 -- This SQL project analyzes a pizza sales dataset to uncover business insights.
--- All queries are based on the project from the WsCube Tech YouTube video.
+
 
 -- Create the database
 CREATE DATABASE pizza_hut;
 USE pizza_hut;
 
--- (Note: The video demonstrates importing CSVs using the MySQL Workbench wizard.
--- You would first create the tables with the correct data types, then import.)
+
 
 -- Let's assume the tables are created as follows:
 -- CREATE TABLE orders (
@@ -39,9 +38,7 @@ USE pizza_hut;
 --     ingredients TEXT NOT NULL,
 --     PRIMARY KEY (pizza_type_id)
 -- );
--- ---------------------------------
--- --- BASIC ANALYSIS QUESTIONS ---
--- ---------------------------------
+
 
 -- Q1: Retrieve the total number of orders placed.
 SELECT 
@@ -93,9 +90,6 @@ GROUP BY pizza_types.name
 ORDER BY total_quantity DESC
 LIMIT 5;
 
--- ---------------------------------------
--- --- INTERMEDIATE ANALYSIS QUESTIONS ---
--- ---------------------------------------
 
 -- Q6: Find the total quantity of each pizza category ordered.
 SELECT 
@@ -153,9 +147,6 @@ GROUP BY pizza_types.name
 ORDER BY total_revenue DESC
 LIMIT 3;
 
--- -----------------------------------
--- --- ADVANCED ANALYSIS QUESTIONS ---
--- -----------------------------------
 
 -- Q11: Calculate the percentage contribution of each pizza category to total revenue.
 SELECT 
